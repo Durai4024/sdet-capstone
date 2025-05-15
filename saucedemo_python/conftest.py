@@ -31,12 +31,4 @@ def login_data():
         password = sheet.cell(row=row, column=2).value
         valid_data.append((username, password))
     
-    # Read invalid data
-    invalid_data = []
-    sheet = workbook['invalid_data']
-    for row in range(2, sheet.max_row + 1):
-        username = sheet.cell(row=row, column=1).value
-        password = sheet.cell(row=row, column=2).value
-        invalid_data.append((username, password))
-    
-    return valid_data, invalid_data
+    return valid_data
